@@ -1,0 +1,13 @@
+Create a mesh network using 802.11s as link layer and bmx6 as layer 3 routing protocol
+
+1. Execute the prepare.sh script by sending the comand: "sh /root/prepare.sh"
+2. Node will configure itself and reboot
+3. Once rebooted you can see the mesh nodes using the bmx6 command line tool:
+ bmx6 -c links
+ bmx6 -c originators
+ bmx6 -cp
+ bmx6 -cd8
+4. Every 5 minutes the number of nodes seen in the network is saved in the /save directory
+5. When the experiment is finished the /save results will be sent to the Wibed controller and available for analysis
+
+More info: http://wiki.confine-project.eu/wibed:example_mesh

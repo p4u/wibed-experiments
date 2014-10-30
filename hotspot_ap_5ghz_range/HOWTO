@@ -1,0 +1,5 @@
+This experiment creates a 5Ghz Access Point interface.
+The purpose of it is to generate the testbed topology, so the wibed nodes can scan and see which nodes are in their range.
+The name of the experiment in WiBed must be WibedTopology
+
+More info: http://wiki.confine-project.eu/wibed:doc_topo
