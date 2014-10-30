@@ -5,7 +5,9 @@
 hostname=$(cat /proc/sys/kernel/hostname)
 ip="$(ip addr show dev br-mgmt | grep inet | awk '{print $2}' | cut -d. -f4 | cut -d / -f1 | awk NR==1)"
 ip6="$(cat /sys/class/net/br-mgmt/address|cut -d: -f6)"
-ids=${ids:-"0 1"}
+
+# List of radio IDs to use (by default radio1)
+ids=${ids:-"1"}
 
 if ! opkg list-installed | grep bmx6; then
 	echo "Installing bmx6"
